@@ -1,0 +1,262 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24/07/2015, 03:47:16 PM
+    Author     : Jordan
+*/
+
+
+.btn{
+    background-color: #ee6e73; 
+}
+.user{
+    float: right;
+    width: 20%;
+    height: 100%;
+}
+#usuariodropdown{
+    float: right;
+    height: 100%;
+    line-height: 56px;
+}
+#Admin{
+    
+}
+/*.row .col.s3{
+    width: 33.33%;
+}*/
+.container{
+    margin-top: 10%;
+}
+.content{
+    width: 100%;
+    height: 100%;
+}
+#imagenuser{
+    padding-left: 0px;
+}
+.contlink{
+    
+    width: 50%;
+    height: 100%;
+    float: left;
+    margin: 0px;
+    padding-left: 20px;
+    padding-right: 0px;
+}
+.NomUser{
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    margin-top: 25px;
+}
+
+/*@media (min-width:150px){
+    .contlink{
+       padding: 0px;
+        font-size: 0.1rem;
+        padding-left: 3px;
+        
+    }
+}
+
+@media (min-width:200px){
+    .contlink{
+       padding: 0px;
+        font-size: 0.2rem;
+        padding-left: 4px;
+        
+    }
+}
+@media (min-width:300px){
+    .contlink{
+       padding: 0px;
+        font-size: 0.3rem;
+        padding-left: 7px;
+        
+    }
+    #Nombre{
+        padding-right: 1px;
+    }
+}
+@media (min-width:500px){
+    .contlink{
+        padding: 0px;
+        font-size: 0.4rem;
+        padding-left: 10px;
+    }
+        #Nombre{
+        padding-right: 4px;
+    }
+}
+@media (min-width:600px){
+    .contlink{
+       padding: 0px;
+        font-size: 0.5rem;
+        padding-left: 18px;
+    }
+}
+@media (min-width:800px){
+    .contlink{
+        padding: 0px;
+       padding-left: 20px;
+        font-size: 0.8rem;
+        //padding-right: 0px;
+    }
+}
+@media (min-width:1000px){
+    #Nombre{
+        padding-left: 30px;
+    }
+}*/
+#logo{
+    width: 12%;
+    height: 100%;
+}
+#imglogo{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+#imag{
+    width: 100%;
+    height: 100%
+}
+
+.Descripcion{
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    margin: 0px;
+    font-size: 1.5rem;
+}
+.links{
+    width: 100%;
+    height: 80%
+}
+
+@media (min-width:150px){
+    html{
+        font-size: 4px;
+    }
+
+}
+
+@media (min-width:220px){
+    html{
+        font-size: 6px;
+    }
+
+
+}
+@media (min-width:250px){
+    html{
+        font-size: 7px;
+    }
+
+
+}
+@media (min-width:350px){
+    html{
+        font-size: 10px;
+    }
+
+}
+@media (min-width:500px){
+    html{
+        font-size: 10px;
+    }
+
+}
+@media (min-width:600px){
+    html{
+        font-size: 11px;
+    }
+        .contlink{
+        padding-left: 0px;
+        font-size: 0.7rem
+    }
+   #nombreusuario{
+        width: 75%;
+        padding-left: 15px;
+    }
+    #imagenuser{
+        width: 25%;
+    }
+}
+@media (min-width:700px){
+    html{
+        font-size: 12px;
+    }
+        .contlink{
+        padding-left: 0px;
+        font-size: 0.7rem
+    }
+    #nombreusuario{
+        width: 75%;
+        padding-left: 15px;
+    }
+    #imagenuser{
+        width: 25%;
+    }
+}
+@media (min-width:800px){
+    html{
+        font-size: 13px;
+    }
+
+}
+@media (min-width:900px){
+    html{
+        font-size: 13px;
+    }
+
+}
+@media (min-width:1000px){
+    html{
+        font-size: 13px;
+    }
+
+}
+@media (min-width:1100px){
+    html{
+        font-size: 13px;
+    }
+}
+@media (min-width:1200px){
+    html{
+        font-size: 13px;
+    }
+}
+@media (min-width:1300px){
+    html{
+        font-size: 13px;
+    }
+
+}
+/*@media (max-width:800px){
+    html{
+        font-size: 13px;
+    }
+        .contlink{
+        padding-left: 0px;
+        font-size: 0.8rem
+    }
+    #nombreusuario{
+        width: 50%;
+        //padding-left: 30px;
+    }
+
+
+    #imagenuser{
+        width: 50%;
+    }
+}*/
+

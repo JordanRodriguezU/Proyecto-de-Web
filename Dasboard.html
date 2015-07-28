@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
+        <link rel="stylesheet" href="My Style/Dasboard.css">
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body class="81c784 green lighten-2">
+        <!--Import jQuery before materialize.js-->
+
+        <nav>
+            <div class="nav-wrapper">
+
+                <a href="#" id="logo" class="brand-logo center"><img id="imglogo" src="Imgs/materialize.png"></a>
+                <!--
+                <ul class="user">
+                    <li id="Nombre" class="content">
+                        <a id="nombreusuario" class="contlink"><h6 class="NomUser">Hi Barroyo</h6></a>
+                        <a id="imagenuser" class="contlink"><img id="imag" src="Imgs/IconClient.png"></a>
+
+                    </li>
+
+                </ul>
+                -->
+                <ul id="dropdown2" class="dropdown-content">
+                    <li><a href="Login.html">Cerrar Sesion<span class="badge">Exit</span></a></li>
+                    <li><a href="#!">Cancelar<span class="badge">Cancel</span></a></li>
+                </ul>
+                <a id="usuariodropdown" class="btn dropdown-button" href="#!" data-activates="dropdown2">Hi Barroyo<i class="mdi-navigation-arrow-drop-down right"></i></a>
+
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="Clients_Administration.html">CLIENTS</a></li>
+                    <li><a href="Chambas_Administration.html">CHAMBAS</a></li>
+                    <li><a href="Invoices_Administration.html">INVOICES</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s3">
+                    <a href="Clients_Administration.html">
+                    <img class="links" src="Imgs/Clients.png">
+                    <h2 class="Descripcion"><strong>Clients</strong></h2>
+                    </a>
+                </div>
+                <div class="col s3">
+                    <a href="Chambas_Administration.html">
+                    <img class="links" src="Imgs/Folder.png">
+                    <h2 class="Descripcion"><strong>Chambas</strong></h2>
+                    </a>
+                </div>
+                <div class="col s3">
+                    <a href="Invoices_Administration.html">
+                    <img class="links" src="Imgs/invoices.png">
+                    <h2 class="Descripcion"><strong>Invoices</strong></h2>
+                    </a>
+                </div>
+                <div id="Admin" class="col s3">
+                    <img class="links" src="Imgs/Admin.png">
+                    <h2 class="Descripcion"><strong>Admin</strong></h2>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".button-collapse").sideNav();
+            });
+        </script>
+    </body>
+</html>
