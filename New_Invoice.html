@@ -39,13 +39,13 @@
                 <div id="colcontet" class=" col s6">
                     <ul class="PartDown">
                         <li id="liImag"><img id="ImagClient" src="Imgs/Base.png"></li>
-                        <li id="EtiClient"><h4 id="EtiquetaCliente"><strong>EDIT CHAMBA</strong></h4></li>
+                        <li id="EtiClient"><h4 id="EtiquetaCliente"><strong>NEW INVOICE</strong></h4></li>
 
                     </ul>
 
                 </div>
                 <div id="boton" class="col s6">
-                    <a href="New_Chamba.html" id="btnnew" class="waves-effect waves-light btn-large">New Chamba</a>
+                    <a href="New_Invoice.html" id="btnnew" class="waves-effect waves-light btn-large">New Invoice</a>
                 </div>
             </div>
         </div>
@@ -85,19 +85,19 @@
                     </div>
                     <div class="row">
                         <div class="col s6">
-                            <input type="date" class="datepicker">
+                            <input type="date" class="datepicker" onclick="Utils.Html()">
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="textarea2" class="materialize-textarea"></textarea>
-                            <label for="textarea1">Enter Your Note</label>
+                            <input id="IdCliente" type="number" class="validate">
+                            <label for="IdCliente">Enter Your Amount</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="Telephone" type="tel" class="validate">
-                            <label for="Telephone">ID</label>
+          <input value="22" disabled id="disabled" type="number" class="validate">
+          <label for="disabled">ID</label>
                         </div>
                     </div>
             </form>
@@ -106,7 +106,7 @@
         <div class="container">
             <div class="row">
                 <div class="col s6">
-                    <a href="Chambas_Administration.html" id="btnCancel" class="waves-effect waves-light btn-large">Cancel</a>
+                    <a href="Invoices_Administration.html" id="btnCancel" class="waves-effect waves-light btn-large">Cancel</a>
                 </div>
                 <div class="col s6">
                     <a id="btnSave" class="waves-effect waves-light btn-large">Save</a>

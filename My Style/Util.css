@@ -205,12 +205,12 @@ and open the template in the editor.
     height: 100%;
 }
 
-#editar{
+.Edit{
     width: 40%;
     height: 20%;
     float: right;
 }
-#eliminar{
+.Delete{
     width: 40%;
     height: 20%;
     float: left;
@@ -258,3 +258,8 @@ and open the template in the editor.
 #Clients:-moz-placeholder { color: #9e9e9e; font-weight: bold; }
 #Clients::-moz-placeholder { color: #9e9e9e; font-weight: bold; }
 #Clients:-ms-input-placeholder { color: #9e9e9e; font-weight: bold; }
+
+
+    html{
+        padding-right: 0px;
+    }

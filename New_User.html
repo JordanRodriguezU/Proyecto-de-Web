@@ -5,10 +5,11 @@
         <meta charset="utf-8">
         <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
         <link rel="stylesheet" href="My Style/Util.css">
-                <script type="text/javascript" src="My Js/jquery-2.1.4.min.js"></script>
 
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <script type="text/javascript" src="My Js/jquery-2.1.4.min.js"></script>
+                <script type="text/javascript" src="My Js/Users.js"></script>
     </head>
     <body class="81c784 green lighten-2">
         <nav>
@@ -17,7 +18,7 @@
                     <li><a href="Login.html">Cerrar Sesion<span class="badge">Exit</span></a></li>
                     <li><a href="#!">Cancelar<span class="badge">Cancel</span></a></li>
                 </ul>
-                <a id="usuariodropdown" class="btn dropdown-button" href="#!" data-activates="dropdown2">Hi Barroyo<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                <a id="usuariodropdown" class="btn dropdown-button" href="#!" data-activates="dropdown2"><i class="mdi-navigation-arrow-drop-down right"></i></a>
 
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">Home</i></a>
                 <ul id="EnlacesSuperiores" class="right hide-on-med-and-down">
@@ -39,13 +40,13 @@
                 <div id="colcontet" class=" col s6">
                     <ul class="PartDown">
                         <li id="liImag"><img id="ImagClient" src="Imgs/Base.png"></li>
-                        <li id="EtiClient"><h4 id="EtiquetaCliente"><strong>EDIT CLIENT</strong></h4></li>
+                        <li id="EtiClient"><h4 id="EtiquetaCliente"><strong>NEW USER</strong></h4></li>
 
                     </ul>
 
                 </div>
                 <div id="boton" class="col s6">
-                    <a href="Clients_Administration.html" id="btnnew" class="waves-effect waves-light btn-large">New Client</a>
+                    <a href="New_Client.html" id="btnnew" class="waves-effect waves-light btn-large">New User</a>
                 </div>
             </div>
         </div>
@@ -53,25 +54,15 @@
         <div class="row">
             <form class="col s12">
                 <div class="row">
-                    <div class="input-field col s6">
-                        <input id="First_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
+                    <div class="input-field col s12">
+                        <input id="user" type="text" class="validate">
+                        <label for="user">Name</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="Telephone" type="tel" class="validate">
-                        <label for="Telephone">Telephone</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="IdCliente" type="number" class="validate">
-                        <label for="IdCliente">ID</label>
+                        <input id="pass" type="text" class="validate">
+                        <label for="pass">Password</label>
                     </div>
                 </div>
             </form>
@@ -80,10 +71,10 @@
         <div class="container">
             <div class="row">
                 <div class="col s6">
-                    <a href="Chambas_Administration.html" id="btnCancel" class="waves-effect waves-light btn-large">Cancel</a>
+                    <a href="Clients_Administration.html" id="btnCancel" class="waves-effect waves-light btn-large">Cancel</a>
                 </div>
                 <div class="col s6">
-                    <a id="btnSave" class="waves-effect waves-light btn-large">Save</a>
+                    <a onclick="Users.AddUsers()" id="btnSave" class="waves-effect waves-light btn-large">Guardar</a>
                 </div>
             </div>
         </div>
@@ -94,7 +85,9 @@
         <script>
             $(document).ready(function () {
                 $(".button-collapse").sideNav();
+                $("#usuariodropdown").append("Admin");
             });
         </script>
     </body>
 </html>
+
