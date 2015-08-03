@@ -57,6 +57,7 @@ var Utils = Utils || {
             $("#Admin").css("display", "none");
             $(".row .col.s3").css("width", "33.33%");
             $("#usuariodropdown").append(localStorage.getItem("UserLog"));
+            $("li#liusers").css("display","none");
         }
         else{
              $("#usuariodropdown").append("Admin");
