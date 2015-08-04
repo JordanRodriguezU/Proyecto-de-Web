@@ -33,20 +33,11 @@ var Users = {
         $('#BodyTable').html("");
         for (var i in usuarios) {
             var users = JSON.parse(usuarios[i]);
-            $('tbody').append("<tr><td>" + users.User + "</td><td>" + users.Password + "</td><td><div class='container'>" +
-                    "<div class='row'>" +
-                    "<div class='col s6'>" +
-                    " <div class='container'>" +
-                    "<a href='Edit_User.html' onclick='Users.EditUsers(this)' class='Edit' ><img class='iconosdeaccion' src='Imgs/Edit_Client.png'></a>" +
-                    " </div>" +
-                    " </div>" +
-                    "<div class='col s6'>" +
-                    "<div class='container'>" +
-                    " <a href='Delete_User.html' onclick='Users.DeleteUsers(this)' class='Delete' ><img class='iconosdeaccion' src='Imgs/delete.png'></a> " +
-                    "</div>  " +
-                    "  </div>" +
-                    " </div>" +
-                    " </div></td></tr>");
+            $('tbody').append("<tr><td><strong>" + users.User + "</strong></td><td><strong>" + users.Password + "</strong></td><td>"+
+                        "<a href='Edit_User.html' onclick='Users.EditUsers(this)' class='Edit'  id='editar'><img class='iconosdeaccion' src='Imgs/Edit_Client.png'></a>"
+
+                        +"<a href='Delete_User.html' onclick='Users.DeleteUsers(this)' class='Delete' id='eliminar'><img class='iconosdeaccion' src='Imgs/delete.png'></a>" 
+                    +"</td>");
         }
         //alert("Datos Cargados Correctamente");
 

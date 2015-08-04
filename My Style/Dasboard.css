@@ -9,6 +9,7 @@ and open the template in the editor.
 */
 
 
+
 .btn{
     background-color: #ee6e73; 
 }
@@ -240,6 +241,14 @@ and open the template in the editor.
         font-size: 13px;
     }
 
+}
+html{
+   background-color: #81c784;
+   background-image: url(../Imgs/Fondo1.png);
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+   background-size: 100% 100%;
+   min-height: 100%;
 }
 /*@media (max-width:800px){
     html{

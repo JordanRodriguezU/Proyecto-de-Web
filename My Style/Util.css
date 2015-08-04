@@ -7,6 +7,20 @@ and open the template in the editor.
     Created on : 24/07/2015, 11:19:32 PM
     Author     : Jordan
 */
+html{
+   background-color: #81c784;
+   background-image: url(../Imgs/Fondo1.png);
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+   background-size: 100% 100%;
+   min-height: 100%;
+}
+td{
+    color: #9e9e9e;
+}
+th{
+    color: #9e9e9e;  
+}
 
 .PartDown{
     width: 100%;
@@ -55,9 +69,16 @@ and open the template in the editor.
     color: red;
 }
 #mobile-demo{
-    background-color: #81c784;
+   background-color: #81c784;
+   background-image: url(../Imgs/Fondo1.png);
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+   background-size: 100% 100%;
+   min-height: 100%;
 }
-
+ul#mobile-demo.side-nav li a{
+    font-size: 2rem;
+}
 #botonletra{
     font-size: 0.8rem;
 }
@@ -204,21 +225,17 @@ and open the template in the editor.
     width: 100%;
     height: 100%;
 }
-
-.Edit{
-    width: 40%;
-    height: 20%;
-    float: right;
+.iconosdeaccion{
+    width: 1.6rem;
+    height: 15px;
+    
 }
-.Delete{
-    width: 40%;
-    height: 20%;
+/*.editar{
     float: left;
 }
-.iconosdeaccion{
-    width: 100%;
-    height: 100%;
-}
+.eliminar{
+    float: right;
+}*/
 .row{
     margin-bottom: 0px;
 }
@@ -262,4 +279,15 @@ and open the template in the editor.
 
     html{
         padding-right: 0px;
+    }
+    .input-field label.active{
+        font-size: 1rem;
+    }
+    input [type=text]{
+        font-size: 2rem;
+        color: #9e9e9e;
+    }
+    input{
+        font-size: 2rem;
+        color: #9e9e9e;
     }
