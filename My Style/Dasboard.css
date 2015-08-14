@@ -9,7 +9,9 @@ and open the template in the editor.
 */
 
 
-
+#dropdown2 li a{
+    font-size: 0.9rem;
+}
 .btn{
     background-color: #ee6e73; 
 }

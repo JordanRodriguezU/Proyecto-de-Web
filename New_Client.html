@@ -9,8 +9,9 @@
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <script type="text/javascript" src="My Js/jquery-2.1.4.min.js"></script>
+                <script type="text/javascript" src="My Js/Clients.js"></script>
     </head>
-    <body class="81c784 green lighten-2">
+    <body>
         <nav>
             <div class="nav-wrapper">
                 <ul id="dropdown2" class="dropdown-content">
@@ -45,7 +46,7 @@
 
                 </div>
                 <div id="boton" class="col s6">
-                    <a href="New_Client.html" id="btnnew" class="waves-effect waves-light btn-large">New Client</a>
+                    <a href="New_Client.html" id="btnnew" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Create New Client">New Client</a>
                 </div>
             </div>
         </div>
@@ -68,22 +69,24 @@
                         <label for="Telephone">Telephone</label>
                     </div>
                 </div>
-                <div class="row">
+               <!-- <div class="row">
                     <div class="input-field col s12">
                         <input id="IdCliente" type="number" class="validate">
                         <label for="IdCliente">ID</label>
                     </div>
-                </div>
+                </div>-->
             </form>
         </div>
         
         <div class="container">
             <div class="row">
                 <div class="col s6">
-                    <a href="Clients_Administration.html" id="btnCancel" class="waves-effect waves-light btn-large">Button</a>
+                   <a href="Clients_Administration.html" id="btnCancel" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Cancel Action">Back</a>
                 </div>
                 <div class="col s6">
-                    <a id="btnSave" class="waves-effect waves-light btn-large">Button</a>
+                    <a id="btnSave" onclick="Clients.AddClients()" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Save Data">Save</a>
+
+               
                 </div>
             </div>
         </div>

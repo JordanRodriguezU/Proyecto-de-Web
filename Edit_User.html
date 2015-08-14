@@ -15,12 +15,12 @@
         <nav>
             <div class="nav-wrapper">
                 <ul id="dropdown2" class="dropdown-content">
-                    <li><a href="Login.html">Cerrar Sesion</a></li>
-                    <li><a href="#!">Cancelar</a></li>
+                    <li><a href="Login.html">Cerrar Sesion<span class="badge">Exit</span></a></li>
+                    <li><a href="#!">Cancelar<span class="badge">Cancel</span></a></li>
                 </ul>
                 <a id="usuariodropdown" class="btn dropdown-button" href="#!" data-activates="dropdown2"><i class="mdi-navigation-arrow-drop-down right"></i></a>
 
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">Home</i></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><img id="menu" src="Imgs/Menu.png"></a>
                 <ul id="EnlacesSuperiores" class="right hide-on-med-and-down">
                     <li><a href="Dasboard.html">Home</a></li>
                     <li><a href="Clients_Administration.html">Clients</a></li>
@@ -48,7 +48,8 @@
 
                 </div>
                 <div id="boton" class="col s6">
-                    <a href="New_User.html" id="btnnew" class="waves-effect waves-light btn-large">New User</a>
+                   <a href="New_User.html" id="btnnew" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Create New User">New User</a>
+
                 </div>
             </div>
         </div>
@@ -73,10 +74,11 @@
         <div class="container">
             <div class="row">
                 <div class="col s6">
-                    <a href="Users_Admin.html" id="btnCancel" class="waves-effect waves-light btn-large">Cancel</a>
+                   <a href="Users_Admin.html" id="btnCancel" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Cancel Action">Cancel</a>
+                   
                 </div>
                 <div class="col s6">
-                    <a href="Users_Admin.html" onclick="Users.Edit()" id="btnSave" class="waves-effect waves-light btn-large">Save</a>
+                    <a href="Users_Admin.html" onclick="Users.Edit()" id="btnSave" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Save Data">Save</a>
                 </div>
             </div>
         </div>

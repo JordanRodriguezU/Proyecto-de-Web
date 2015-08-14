@@ -46,12 +46,6 @@ var Utils = Utils || {
             alert("Lo Sentimos Los datos proporcionados Son Incorrectos");
         }
     },
-    Html: function () {
-        $("html").css({
-            "padding-right": "0px",
-            "overflow": "visible"
-        });
-    },
     ValidateUserEnter: function () {
         if (localStorage.getItem("UserLog")!=="Admin") {
             $("#Admin").css("display", "none");

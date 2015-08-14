@@ -8,9 +8,11 @@
 
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <script type="text/javascript" src="My Js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="My Js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="My Js/Invoices.js"></script>
+
     </head>
-    <body class="81c784 green lighten-2">
+    <body>
         <nav>
             <div class="nav-wrapper">
                 <ul id="dropdown2" class="dropdown-content">
@@ -45,7 +47,7 @@
 
                 </div>
                 <div id="boton" class="col s6">
-                    <a href="New_Invoice.html" id="btnnew" class="waves-effect waves-light btn-large">New Invoice</a>
+                   <a href="New_Invoice.html" id="btnnew" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Create New Invoice">New Invoice</a>
                 </div>
             </div>
         </div>
@@ -54,50 +56,32 @@
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="Clients" list="cervezas" placeholder="Select your Client" />
-                        <datalist id="cervezas">
-                            <option value="Heineken" />
-                            <option value="Budweiser" />
-                            <option value="Skol" />
-                            <option value="Cristal" />
-                            <option value="Quilmes" />
-                            <option value="Estrella Damm" />
-                            <option value="Sol" />
-                            <option value="Cusqueña" />
-                            <option value="Paceña" />
-                            <option value="Tecate" />
-                            <option value="Corona" />
-                            <option value="Águila" />
-                            <option value="Guinness" />
-                            <option value="Carlsberg" />
-                            <option value="Becks" />
-                            <option value="Brahma" />
-                            <option value="Polar" />
-                            <option value="Medalla" />
+                        <input id="Clients" list="Clientes" placeholder="Select your Client" />
+                        <datalist id="Clientes">
+                            <option style="color: #9e9e9e" value="Hoa">
                         </datalist>
 
                     </div>
+                    <script>Invoices.LlenarData();</script>
                     <div class="row">
                         <div class="input-field col s12">
                             <textarea id="textarea1" class="materialize-textarea"></textarea>
                             <label for="textarea1">Enter Your Description</label>
                         </div>
                     </div>
+
                     <div class="row">
+                        <div class="col s2">
+                            <label id="lbldate">Date:</label>
+                        </div>
                         <div class="col s6">
-                            <input type="date" class="datepicker" onclick="Utils.Html()">
+                            <input id="datepick" type="date" onclick="Utils.Html()" class="datepicker">
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="IdCliente" type="number" class="validate">
-                            <label for="IdCliente">Enter Your Amount</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-          <input value="22" disabled id="disabled" type="number" class="validate">
-          <label for="disabled">ID</label>
+                            <input id="Amount" type="number" class="validate">
+                            <label for="Amount">Enter Your Amount</label>
                         </div>
                     </div>
             </form>
@@ -106,10 +90,10 @@
         <div class="container">
             <div class="row">
                 <div class="col s6">
-                    <a href="Invoices_Administration.html" id="btnCancel" class="waves-effect waves-light btn-large">Cancel</a>
+                    <a href="Invoices_Administration.html" id="btnCancel" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Cancel Action">Back</a>
                 </div>
                 <div class="col s6">
-                    <a id="btnSave" class="waves-effect waves-light btn-large">Save</a>
+                    <a onclick="Invoices.AddInvoices();" id="btnSave" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Save Data">Save</a>
                 </div>
             </div>
         </div>
@@ -118,13 +102,13 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
         <script>
-            $(document).ready(function () {
-                $(".button-collapse").sideNav();
-                $('.datepicker').pickadate({
-                    selectMonths: true, // Creates a dropdown to control month
-                    selectYears: 15 // Creates a dropdown of 15 years to control year
-                });
-            });
+                                $(document).ready(function () {
+                                    $(".button-collapse").sideNav();
+                                    $('.datepicker').pickadate({
+                                        selectMonths: true, // Creates a dropdown to control month
+                                        selectYears: 15 // Creates a dropdown of 15 years to control year 
+                                    });
+                                });
         </script>
     </body>
 </html>

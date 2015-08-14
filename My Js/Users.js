@@ -23,7 +23,9 @@ var Users = {
         var newUser = JSON.stringify({User: $("#user").val(), Password: $("#pass").val()});
         usuarios.push(newUser);
         localStorage.setItem("tbUsers", JSON.stringify(usuarios));
-        alert("The Data Was Saved");
+       // alert("The Data Was Saved");
+       Materialize.toast('The Data Was Saved', 3000, 'rounded');
+        //Materialize.toast('<span>Data Was Saved</span><a class=&quot;btn-flat yellow-text&quot; href=New_User.html;#!&quot;>Ok<a>', 5000);
 
 
     },
@@ -33,10 +35,14 @@ var Users = {
         $('#BodyTable').html("");
         for (var i in usuarios) {
             var users = JSON.parse(usuarios[i]);
-            $('tbody').append("<tr><td><strong>" + users.User + "</strong></td><td><strong>" + users.Password + "</strong></td><td>"+
-                        "<a href='Edit_User.html' onclick='Users.EditUsers(this)' class='Edit'  id='editar'><img class='iconosdeaccion' src='Imgs/Edit_Client.png'></a>"
-
-                        +"<a href='Delete_User.html' onclick='Users.DeleteUsers(this)' class='Delete' id='eliminar'><img class='iconosdeaccion' src='Imgs/delete.png'></a>" 
+            $('tbody').append("<tr><td><strong>" + users.User + "</strong></td><td><strong>" + users.Password + "</strong></td><td>"
+                       
+               + "<a href='Edit_User.html' onclick='Users.EditUsers(this)' data-position='left' data-delay='50' data-tooltip='Update' class='btn tooltipped Edit'  id='editar'><img class='iconosdeaccion' src='Imgs/Edit_Client.png'></a>"
+                +"<a href='Delete_User.html' onclick='Users.DeleteUsers(this)' data-position='left' data-delay='50' data-tooltip='Delete' class='btn tooltipped Delete' id='eliminar'><img class='iconosdeaccion' src='Imgs/delete.png'></a>"
+                 //<a class="btn tooltipped" data-position="left" data-delay="50" data-tooltip="Delete" id="eliminar"><img class="iconosdeaccion" src="Imgs/delete.png"></a> 
+//                        "<a href='Edit_User.html' onclick='Users.EditUsers(this)' class='Edit'  id='editar'><img class='iconosdeaccion' src='Imgs/Edit_Client.png'></a>"
+//
+//                        +"<a href='Delete_User.html' onclick='Users.DeleteUsers(this)' class='Delete' id='eliminar'><img class='iconosdeaccion' src='Imgs/delete.png'></a>" 
                     +"</td>");
         }
         //alert("Datos Cargados Correctamente");
@@ -44,7 +50,7 @@ var Users = {
 
     },
     DeleteUsers: function (etiqueta) {
-        var deletes = $(".Delete");
+        var deletes = $("a#eliminar.btn.tooltipped.Delete");
         for (var i = 0; i < deletes.length; i++)
         {
             if (deletes[i] === etiqueta) {
@@ -54,7 +60,7 @@ var Users = {
         }
     },
     EditUsers: function (etiqueta) {
-        var Edits = $(".Edit");
+        var Edits = $("a#editar.btn.tooltipped.Edit");
         for (var i = 0; i < Edits.length; i++)
         {
             if (Edits[i] === etiqueta) {

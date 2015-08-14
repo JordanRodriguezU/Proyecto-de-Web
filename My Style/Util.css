@@ -14,6 +14,7 @@ html{
    background-attachment: scroll;
    background-size: 100% 100%;
    min-height: 100%;
+   padding-right: 0px !important;
 }
 td{
     color: #9e9e9e;
@@ -89,6 +90,9 @@ ul#mobile-demo.side-nav li a{
         #botonletra{
         font-size: 0.3rem;
     }
+        #TablaClients{
+        display: none
+    }
 }
 
 @media (min-width:220px){
@@ -110,6 +114,7 @@ ul#mobile-demo.side-nav li a{
         font-size: 0.4rem;
     }
 
+
 }
 @media (min-width:310px){
     html{
@@ -118,6 +123,7 @@ ul#mobile-demo.side-nav li a{
             #botonletra{
         font-size: 0.5rem;
     }
+
 
 }
 @media (min-width:365px){
@@ -130,6 +136,8 @@ ul#mobile-demo.side-nav li a{
          #botonletra{
         font-size: 0.5rem;
     }
+
+
 }
 @media (min-width:500px){
     html{
@@ -141,6 +149,12 @@ ul#mobile-demo.side-nav li a{
         #botonletra{
         font-size: 0.8rem;
     }
+    #Fmobil{
+        display: none;
+    }
+        #TablaClients{
+        display: table;
+    }
 }
 @media (min-width:600px){
     html{
@@ -149,6 +163,9 @@ ul#mobile-demo.side-nav li a{
     #boton{
     margin-top: 7%;
 }
+    #Fmobil{
+        display: none;
+    }
 }
 @media (min-width:700px){
     html{
@@ -157,6 +174,9 @@ ul#mobile-demo.side-nav li a{
     #boton{
     margin-top: 7%;
 }
+    #Fmobil{
+        display: none;
+    }
 }
 @media (min-width:800px){
     html{
@@ -165,6 +185,9 @@ ul#mobile-demo.side-nav li a{
     #boton{
     margin-top: 6%;
 }
+    #Fmobil{
+        display: none;
+    }
 
 }
 @media (min-width:900px){
@@ -174,7 +197,9 @@ ul#mobile-demo.side-nav li a{
     #boton{
     margin-top: 6%;
 }
-
+    #Fmobil{
+        display: none;
+    }
 }
 @media (min-width:1000px){
     html{
@@ -183,6 +208,9 @@ ul#mobile-demo.side-nav li a{
     #boton{
     margin-top: 7%;
 }
+    #Fmobil{
+        display: none;
+    }
 
 }
 @media (min-width:1100px){
@@ -192,15 +220,24 @@ ul#mobile-demo.side-nav li a{
     #boton{
     margin-top: 6%;
 }
+    #Fmobil{
+        display: none;
+    }
 }
 @media (min-width:1200px){
     html{
         font-size: 13px;
     }
+        #Fmobil{
+        display: none;
+    }
 }
 @media (min-width:1300px){
     html{
         font-size: 13px;
+    }
+        #Fmobil{
+        display: none;
     }
 }
 /*@media (max-width:800px){
@@ -226,7 +263,7 @@ ul#mobile-demo.side-nav li a{
     height: 100%;
 }
 .iconosdeaccion{
-    width: 1.6rem;
+    width: 1.8rem;
     height: 15px;
     
 }
@@ -266,6 +303,7 @@ ul#mobile-demo.side-nav li a{
     padding: 0;
     box-shadow: none;
     margin: 0 0 15px 0;
+    color: darkgray !important;
 }
 #Clients:focus:not([readonly]){
     color: black;
@@ -291,3 +329,114 @@ ul#mobile-demo.side-nav li a{
         font-size: 2rem;
         color: #9e9e9e;
     }
+    
+    #editar{
+        margin-right: 1.5%;
+        width: 1.5rem;
+        height: 15px;
+        line-height: 0px;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0px;
+        
+    }
+    #eliminar{
+        margin-left: 1.5%;
+        width: 1.5rem;
+        height: 15px;
+        line-height: 0px;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0px;
+    }
+    
+#dropdown2 li a{
+    font-size: 0.9rem;
+}
+#menu{
+    width: 8rem;
+    height: 100%;
+}
+#lbldate{
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+
+}
+.col .s2{
+    margin-top: 1.8%;
+}
+button.btn-flat.picker_close:onclick{
+    html{padding-right: 0px}
+}
+
+a#btnnew.btn.tooltipped{
+    background-color: #41020A;
+}
+a#btnSave.waves-effect.waves-light.btn-large.tooltipped{
+    background-color: #ee6e73;
+    //opacity: 0.3;
+    
+}
+a#btnCancel.waves-effect.waves-light.btn-large.tooltipped{
+    background-color: #ee6e73;
+}
+a#btnnew.waves-effect.waves-light.btn-large.tooltipped{
+    background-color: #ee6e73; 
+    
+}
+a#btnSave.waves-effect.waves-light.btn-large.tooltipped:hover{
+    background-color: gray;
+}
+a#btnCancel.waves-effect.waves-light.btn-large.tooltipped:hover{
+    background-color: gray;
+}
+a#btnnew.waves-effect.waves-light.btn-large.tooltipped:hover{
+    background-color: gray; 
+}
+    
+.acciones{
+    height: 5rem;
+    width: 25%;
+}
+.select-wrapper span.caret{
+    top: 2px;
+}
+.select-wrapper input.select-dropdown{
+    font-size: 2rem;
+}
+.select-wrapper + label{
+    font-size: 1.5rem;
+}
+.dropdown-content li > span{
+    font-size: 2rem;
+}
+#vista{
+    height: 38rem;
+}
+.lbl{
+    height: 5rem;//5rem
+    width: 100%;
+    font-size: 1.6rem;
+}
+#vista li{
+    height: 5rem;
+}
+ul#vista li.descr{
+    height:2rem; 
+}
+ul#vista li.descr label.descrip{
+    font-size: 1.8rem;
+}
+ul#vista li#txtdesc{
+    height: 8rem;
+}
+#txtdescrip{
+    border: none;
+   -webkit-appearance: label;
+    color: #9e9e9e;
+    height: 8rem;
+}
+textarea.materialize-textarea{
+    color: darkgrey;
+}
