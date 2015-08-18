@@ -98,7 +98,7 @@ var Clients = {
         var Clientes = Clients.tbCls();
         debugger;
         var idbuscar = parseInt(localStorage.getItem("IdClient"));
-        if (screen.width < 500) {
+        if (screen.width < 550) {
             for (var i in Clientes) {
                 var Client = JSON.parse(Clientes[i]);
                 var id = parseInt(Client.Id);
@@ -120,7 +120,7 @@ var Clients = {
     Edit: function () {
         var Clientes = Clients.tbCls();
         var idbuscar = parseInt(localStorage.getItem("IdClient"));
-        if (screen.width < 500) {
+        if (screen.width < 550) {
             for (var i in Clientes) {
                 var Client = JSON.parse(Clientes[i]);
                 var id = parseInt(Client.Id);
@@ -139,7 +139,7 @@ var Clients = {
     EtiH3: function () {
         var Clientes = Clients.tbCls();
         var idbuscar = parseInt(localStorage.getItem("IdClient"));
-        if (screen.width < 500) {
+        if (screen.width < 550) {
             for (var i in Clientes) {
                 var Client = JSON.parse(Clientes[i]);
                 var id = parseInt(Client.Id);
@@ -156,7 +156,7 @@ var Clients = {
     Delete: function () {
         var Clientes = Clients.tbCls();
         var idbuscar = parseInt(localStorage.getItem("IdClient"));
-        if (screen.width < 500) {
+        if (screen.width < 550) {
             for (var i in Clientes) {
                 var Client = JSON.parse(Clientes[i]);
                 var id = parseInt(Client.Id);
@@ -185,5 +185,14 @@ var Clients = {
         $("#Telep").html(matrix[3]);
 
 
+    },
+        UserEnter: function () {
+        if (localStorage.getItem("UserLog")!=="Admin") {
+            $("#usuariodropdown").append(localStorage.getItem("UserLog"));
+            $("li.admin").css("display","none");
+        }
+        else{
+             $("#usuariodropdown").append("Admin");
+        }
     }
 };

@@ -79,11 +79,13 @@ var Invoices = {
 
     },
     DeleteInvoice: function (etiqueta) {
+        debugger;
         var deletes = $("a#eliminar.btn.tooltipped.Delete");
         for (var i = 0; i < deletes.length; i++)
         {
             if (deletes[i] === etiqueta) {
                 localStorage.setItem("Index", i);
+                var x=i;
 
             }
         }
@@ -101,7 +103,7 @@ var Invoices = {
     Fill: function () {
         var invoices = Invoices.tbIncs();
         var idbuscar = parseInt(localStorage.getItem("IdInvoice"));
-        if (screen.width < 500) {
+        if (screen.width < 550) {
             for (var i in invoices) {
                 var Invoice = JSON.parse(invoices[i]);
                 var id = parseInt(Invoice.Id);
@@ -129,7 +131,7 @@ var Invoices = {
     Edit: function () {
         var invoices = Invoices.tbIncs();
         var idbuscar = parseInt(localStorage.getItem("IdInvoice"));
-        if (screen.width < 500) {
+        if (screen.width < 550) {
             for (var i in invoices) {
                 var invoic = JSON.parse(invoices[i]);
                 var id = parseInt(invoic.Id);
@@ -143,6 +145,41 @@ var Invoices = {
             var invoice = JSON.parse(invoices[index]);
             invoices[index] = JSON.stringify({Id: invoice.Id, Client: $("#Clients").val(), Description: $("#textarea1").val(), Date: $("#picker").val(),Amount: $("#Amount").val()});
             localStorage.setItem("tbInvoices", JSON.stringify(invoices));
+        }
+    },
+        Delete: function () {
+        var invoices = Invoices.tbIncs();
+        var idbuscar = parseInt(localStorage.getItem("IdInvoice"));
+        if (screen.width < 550) {
+            for (var i in invoices) {
+                var Client = JSON.parse(invoices[i]);
+                var id = parseInt(Client.Id);
+                if (id === idbuscar) {
+                    invoices.splice(i, 1);
+                    localStorage.setItem("tbInvoices", JSON.stringify(invoices));
+                }
+            }
+        } else {
+            var index = parseInt(localStorage.getItem("Index"));
+            invoices.splice(index, 1);
+            localStorage.setItem("tbInvoices", JSON.stringify(invoices));
+        }
+    },
+        EtiH3: function () {
+        var invoices = Invoices.tbIncs();
+        var idbuscar = parseInt(localStorage.getItem("IdInvoice"));
+        if (screen.width < 550) {
+            for (var i in invoices) {
+                var invoic = JSON.parse(invoices[i]);
+                var id = parseInt(invoic.Id);
+                if (id === idbuscar) {
+                    $("#TextoDelete").html("Are you sure you want to delete the Invoice with name" + " '" + invoic.Client+"' and Id "+invoic.Id);
+                }
+            }
+        } else {
+            var index = parseInt(localStorage.getItem("Index"));
+            var invoic = JSON.parse(invoices[index]);
+            $("#TextoDelete").html("Are you sure you want to delete the Invoice with name" +" '" + invoic.Client+"' and Id "+invoic.Id);
         }
     },
     Cargar: function () {
@@ -160,6 +197,15 @@ var Invoices = {
 
 
 
+    },
+          UserEnter: function () {
+        if (localStorage.getItem("UserLog")!=="Admin") {
+            $("#usuariodropdown").append(localStorage.getItem("UserLog"));
+            $("li.admin").css("display","none");
+        }
+        else{
+             $("#usuariodropdown").append("Admin");
+        }
     }
 };
 

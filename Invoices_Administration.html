@@ -21,7 +21,7 @@
                     <li><a href="Login.html">Cerrar Sesion<span class="badge">Exit</span></a></li>
                     <li><a href="#!">Cancelar<span class="badge">Cancel</span></a></li>
                 </ul>
-                <a id="usuariodropdown" class="btn dropdown-button" href="#!" data-activates="dropdown2">Hi Barroyo<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                <a id="usuariodropdown" class="btn dropdown-button" href="#!" data-activates="dropdown2"><i class="mdi-navigation-arrow-drop-down right"></i></a>
 
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><img id="menu" src="Imgs/Menu.png"></a>
                 <ul id="EnlacesSuperiores" class="right hide-on-med-and-down">
@@ -29,13 +29,16 @@
                     <li><a href="Clients_Administration.html">Clients</a></li>
                     <li><a href="Chambas_Administration.html">Chambas</a></li>
                     <li><a href="Invoices_Administration.html">Invoices</a></li>
+                     <li class="admin"><a href="Users_Admin.html">Users</a></li>
                 </ul>
                 <ul  class="side-nav" id="mobile-demo">
                     <li><a href="Dasboard.html">Home</a></li>
                     <li><a href="Clients_Administration.html">Clients</a></li>
                     <li><a href="Chambas_Administration.html">Chambas</a></li>
                     <li><a href="Invoices_Administration.html">Invoices</a></li>
+                     <li class="admin"><a href="Users_Admin.html">Users</a></li>
                 </ul>
+                <script>Invoices.UserEnter();</script>
             </div>
         </nav>
         <div class="container">
@@ -49,7 +52,7 @@
 
                 </div>
                 <div id="boton" class="col s6">
-                    <a href="New_Invoice.html" id="btnnew" class="waves-effect waves-light btn-large">New Invoice</a>
+                   <a href="New_Invoice.html" id="btnnew" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Create New Invoice">New Invoice</a>
                 </div>
             </div>
         </div>
@@ -143,12 +146,12 @@
                     </div>
                     <div class="col s4">
                         <a href="Edit_Invoice.html" id="Ed"><img class="acciones" src="Imgs/Edit_Client.png"></a>
-                        <a id="Dl"><img class="acciones" src="Imgs/delete.png"></a> 
+                        <a href="Delete_Invoice.html" id="Dl"><img class="acciones" src="Imgs/delete.png"></a> 
                     </div>
 
                 </form>
             </div>
-            <script>Invoices.AllInvoices()</script>
+            <script>Invoices.AllInvoices();</script>
             <div class="row">
                 <div class="col s12">
                     <ul id="vista">
@@ -169,9 +172,9 @@
                         <li class="descr">
                             <label class="descrip">Description</label>
                         </li>
-                        <li id="txtdesc">
+                        <li class="txtdesc">
                             
-                            <textarea id="txtdescrip" disabled></textarea>>
+                            <textarea id="txtdescrip" class="txt" disabled></textarea>>
                         </li>
                         <li class="descr">
                             <label class="descrip">Date</label>
@@ -193,7 +196,7 @@
 
 
         </div>
-
+        
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
         <script>

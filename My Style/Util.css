@@ -331,7 +331,7 @@ ul#mobile-demo.side-nav li a{
     }
     
     #editar{
-        margin-right: 1.5%;
+        margin-right: 18.5%;
         width: 1.5rem;
         height: 15px;
         line-height: 0px;
@@ -412,7 +412,7 @@ a#btnnew.waves-effect.waves-light.btn-large.tooltipped:hover{
     font-size: 2rem;
 }
 #vista{
-    height: 38rem;
+    height: 41rem;
 }
 .lbl{
     height: 5rem;//5rem
@@ -428,15 +428,21 @@ ul#vista li.descr{
 ul#vista li.descr label.descrip{
     font-size: 1.8rem;
 }
-ul#vista li#txtdesc{
+ul#vista li.txtdesc{
     height: 8rem;
 }
-#txtdescrip{
+.txt{
     border: none;
    -webkit-appearance: label;
     color: #9e9e9e;
     height: 8rem;
+    font-size: 1.3rem;
 }
 textarea.materialize-textarea{
     color: darkgrey;
+}
+
+ul#mobile-demo.side-nav li{
+    border-bottom: 2px darkslategrey ridge;
+    //border-top: 2px black ridge;
 }

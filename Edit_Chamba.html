@@ -9,6 +9,8 @@
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <script type="text/javascript" src="My Js/jquery-2.1.4.min.js"></script>
+                <script type="text/javascript" src="My Js/Chambas.js"></script>
+
     </head>
     <body>
         <nav>
@@ -17,21 +19,25 @@
                     <li><a href="Login.html">Cerrar Sesion<span class="badge">Exit</span></a></li>
                     <li><a href="#!">Cancelar<span class="badge">Cancel</span></a></li>
                 </ul>
-                <a id="usuariodropdown" class="btn dropdown-button" href="#!" data-activates="dropdown2">Hi Barroyo<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                <a id="usuariodropdown" class="btn dropdown-button" href="#!" data-activates="dropdown2"><i class="mdi-navigation-arrow-drop-down right"></i></a>
 
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">Home</i></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><img id="menu" src="Imgs/Menu.png"></a>
                 <ul id="EnlacesSuperiores" class="right hide-on-med-and-down">
                     <li><a href="Dasboard.html">Home</a></li>
                     <li><a href="Clients_Administration.html">Clients</a></li>
                     <li><a href="Chambas_Administration.html">Chambas</a></li>
                     <li><a href="Invoices_Administration.html">Invoices</a></li>
+                    <li class="admin"><a href="Users_Admin.html">Users</a></li>
                 </ul>
                 <ul  class="side-nav" id="mobile-demo">
                     <li><a href="Dasboard.html">Home</a></li>
                     <li><a href="Clients_Administration.html">Clients</a></li>
                     <li><a href="Chambas_Administration.html">Chambas</a></li>
                     <li><a href="Invoices_Administration.html">Invoices</a></li>
+                    <li class="admin"><a href="Users_Admin.html">Users</a></li>
                 </ul>
+                                <script>Chambas.UserEnter();</script>
+
             </div>
         </nav>
         <div class="container">
@@ -45,7 +51,7 @@
 
                 </div>
                 <div id="boton" class="col s6">
-                    <a href="New_Chamba.html" id="btnnew" class="waves-effect waves-light btn-large">New Chamba</a>
+                   <a href="New_Chamba.html" id="btnnew" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Create New Chamba">New Chamba</a>
                 </div>
             </div>
         </div>
@@ -54,27 +60,10 @@
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="Clients" list="cervezas" placeholder="Select your Client" />
-                        <datalist id="cervezas">
-                            <option value="Heineken" />
-                            <option value="Budweiser" />
-                            <option value="Skol" />
-                            <option value="Cristal" />
-                            <option value="Quilmes" />
-                            <option value="Estrella Damm" />
-                            <option value="Sol" />
-                            <option value="Cusqueña" />
-                            <option value="Paceña" />
-                            <option value="Tecate" />
-                            <option value="Corona" />
-                            <option value="Águila" />
-                            <option value="Guinness" />
-                            <option value="Carlsberg" />
-                            <option value="Becks" />
-                            <option value="Brahma" />
-                            <option value="Polar" />
-                            <option value="Medalla" />
+                        <input id="Clients" list="Clientes" placeholder="Select your Client" />
+                        <datalist id="Clientes">
                         </datalist>
+                        <script>Chambas.LlenarData();</script>
 
                     </div>
                     <div class="row">
@@ -88,7 +77,7 @@
                             <label id="lbldate">Date:</label>
                         </div>
                         <div class="col s6">
-                            <input type="date" class="datepicker">
+                            <input id="picker" type="date" class="datepicker">
                         </div>
                     </div>
                     <div class="row">
@@ -97,26 +86,23 @@
                             <label for="textarea1">Enter Your Note</label>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="Telephone" type="tel" class="validate">
-                            <label for="Telephone">ID</label>
-                        </div>
-                    </div>
             </form>
         </div>
 
         <div class="container">
             <div class="row">
                 <div class="col s6">
-                    <a href="Chambas_Administration.html" id="btnCancel" class="waves-effect waves-light btn-large">Cancel</a>
+                   <a href="Chambas_Administration.html" id="btnCancel" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Cancel Action">Back</a>
+
+                    
                 </div>
                 <div class="col s6">
-                    <a id="btnSave" class="waves-effect waves-light btn-large">Save</a>
+                     <a href="Chambas_Administration.html" id="btnSave" onclick="Chambas.Edit()" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Save Data">Save</a>
+
+                  
                 </div>
             </div>
         </div>
-
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
@@ -127,6 +113,7 @@
                     selectMonths: true, // Creates a dropdown to control month
                     selectYears: 15 // Creates a dropdown of 15 years to control year
                 });
+                Chambas.Fill();
             });
         </script>
     </body>
